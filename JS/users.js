@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
                     const isFav = favorites.includes(row.id);
                     return `
-            <button class="btn btn-view" data-id="${row.id}">View</button>
+            <button class="btn btn-view " data-id="${row.id}">View</button>
             <button class="btn btn-edit" data-id="${row.id}">Edit</button>
             <button class="btn btn-delete" data-id="${row.id}">Delete</button>
             <button class="btn btn-fav" data-id="${row.id}">

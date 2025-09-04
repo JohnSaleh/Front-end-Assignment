@@ -30,14 +30,15 @@ addEventListener("DOMContentLoaded", async () => {
         postsToRender.forEach(post => {
             const postCard = document.createElement("div");
             postCard.classList.add("post-card");
+            postCard.classList.add("animate__animated", "animate__fadeInLeft");
 
             postCard.innerHTML = `
-        <div class="post-title">${post.title}</div>
-        <div class="post-author">By: ${userMap[post.userId] || "Unknown User"}</div>
+        <div class="post-title animate__animated animate__fadeInLeft">${post.title}</div>
+        <div class="post-author animate__animated animate__fadeInLeft">By: ${userMap[post.userId] || "Unknown User"}</div>
         <br>
-        <div class="post-body">${post.body}</div>
+        <div class="post-body animate__animated animate__fadeInLeft">${post.body}</div>
         <br>
-        <div class="post-actions">
+        <div class="post-actions animate__animated animate__fadeInLeft">
           <button class="btn-view-comments" data-id="${post.id}">Comments</button>
           <button class="btn-edit-post" data-id="${post.id}">Edit</button>
           <button class="btn-delete-post" data-id="${post.id}">Delete</button>
@@ -137,7 +138,7 @@ function toggleComments(postId, comments) {
     commentsDiv.classList.add("comments");
 
     commentsDiv.innerHTML = comments.map(c => `
-    <div class="comment">
+    <div class="animate__animated animate__fadeIn comment">
       <strong>${c.name}</strong> (${c.email})
       <p>${c.body}</p>
     </div>
