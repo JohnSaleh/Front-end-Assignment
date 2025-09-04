@@ -9,5 +9,8 @@ A small dashboard project built with **HTML, CSS, Animate.css, jQuery, DataTable
 
 APIs Used:
 Users ➝ https://jsonplaceholder.typicode.com/users
+
 Posts ➝ https://jsonplaceholder.typicode.com/posts
+
 Comments ➝ https://jsonplaceholder.typicode.com/comments?postId={id}
+
