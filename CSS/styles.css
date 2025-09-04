@@ -1,0 +1,275 @@
+:root {
+    --bg: #f7f7f9;
+    --card: #fff;
+    --text: #111;
+    --muted: #666;
+}
+
+.dark {
+    --bg: #0e0f12;
+    --card: #17181c;
+    --text: #e8e8ea;
+    --muted: #aaa;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Segoe UI, Roboto;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
+}
+
+.loader-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .2);
+    z-index: 9999;
+}
+
+.loader {
+    width: 56px;
+    height: 56px;
+    border: 6px solid #ccc;
+    border-top-color: #2d6cdf;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Navigation buttons */
+.nav-btn {
+    background: #2d6cdf;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: #1d4fc7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Table action buttons */
+.btn-view {
+    background: #2d6cdf;
+    color: white;
+    margin-right: 4px;
+}
+
+.btn-view:hover {
+    background: #1d4fc7;
+}
+
+.btn-edit {
+    background: #e0a800;
+    color: white;
+    margin-right: 4px;
+}
+
+.btn-edit:hover {
+    background: #c69500;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #b02a37;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .modal-content {
+    background: var(--card);
+    color: var(--text);
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-fav {
+    display: flex;
+    background: transparent;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-fav:hover {
+    color: gold;
+}
+
+body.dark .btn-fav {
+    color: var(--text);
+}
+
+body.dark .btn-fav:hover {
+    color: gold;
+}
+
+/* Theme toggle button */
+#themeToggle {
+    background: transparent;
+    border: 1px solid var(--muted);
+    color: var(--text);
+}
+
+#themeToggle:hover {
+    background: var(--card);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.post-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.post-body {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-view-comments { background: #2d6cdf; color: white; }
+.btn-edit-post { background: #e0a800; color: white; }
+.btn-delete-post { background: #dc3545; color: white; }
+
+
+body.dark .post-card {
+  background: #2b2b2b;
+  color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+.comments {
+  margin-top: 12px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+body.dark .comments {
+  background: #333;
+  border-color: #555;
+}
+
+#addPostBtn {
+    background: #2d6cdf;
+    color: white;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.star {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.star.active {
+    color: #ffb400;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-overlay" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="nav container">
+        <div class="nav-buttons">
+            <button class="btn nav-btn" onclick="location.href='index.html'">Dashboard</button>
+            <button class="btn nav-btn" onclick="location.href='users.html'">Users</button>
+            <button class="btn nav-btn" onclick="location.href='posts.html'">Posts</button>
+        </div>
+        <div>
+            <button id="themeToggle" class="btn">🌙/☀️</button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Posts</h1>
+
+        <!-- Search -->
+        <input type="text" id="searchPosts" placeholder="Search posts...">
+
+        <!-- Add Post Button -->
+        <button id="addPostBtn" class="btn">+ Add Post</button>
+
+        <!-- Posts Container -->
+        <div id="postsContainer" class="posts-grid"></div>
+    </div>
+
+
+    <div id="addPostModal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Post</h2>
+            <form id="addPostForm">
+                <label>Title:</label>
+                <input type="text" id="newPostTitle" required>
+                <label>Body:</label>
+                <textarea id="newPostBody" required></textarea>
+                <label>User:</label>
+                <select id="newPostUser" required></select>
+                <div class="modal-actions">
+                    <button type="submit" class="btn">Save</button>
+                    <button type="button" id="cancelAddPost" class="btn btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="JS/ui.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/users.js"></script>
+    <script src="JS/posts.js"></script>
+</body>
+
+</html>

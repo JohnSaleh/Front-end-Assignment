@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-overlay" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="nav container">
+        <div class="nav-buttons">
+            <button class="btn nav-btn" onclick="location.href='index.html'">Dashboard</button>
+            <button class="btn nav-btn" onclick="location.href='users.html'">Users</button>
+            <button class="btn nav-btn" onclick="location.href='posts.html'">Posts</button>
+        </div>
+
+        <div>
+            <button id="themeToggle" class="btn">🌙/☀️</button>
+        </div>
+    </nav>
+
+    <!-- Page content will go here -->
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="card">
+            <h3>Stats</h3>
+            <p>👥 Users: <span id="userCount">0</span></p>
+            <p>📝 Posts: <span id="postCount">0</span></p>
+            <p>💬 Comments: <span id="commentCount">0</span></p>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="JS/ui.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/dashboard.js"></script>
+</body>
+
+</html>
