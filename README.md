@@ -8,6 +8,7 @@ A small dashboard project built with **HTML, CSS, Animate.css, jQuery, DataTable
 - Loader + Dark/Light mode toggle
 
 APIs Used:
+
 Users ➝ https://jsonplaceholder.typicode.com/users
 
 Posts ➝ https://jsonplaceholder.typicode.com/posts
